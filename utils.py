@@ -27,33 +27,6 @@ def set_seed(seed):
     torch.backends.cudnn.deterministic = True
 
 
-def Normalize(data):
-    print(data)
-    print(np.max(data), np.min(data))
-    m = np.mean(data)
-    mx = np.max(data)
-    mn = np.min(data)
-    new_data = (data - m) / (mx - mn)
-    print(new_data)
-    print(np.max(new_data), np.min(new_data))
-    return new_data
-
-
-def Sigmoid(data):
-    # print(data)
-    # print(np.max(data), np.min(data))
-    data = 1.0 / (1 + np.exp(data))
-    # print(data)
-    # print(np.max(data), np.min(data))
-    return data
-
-
-# define "soft" cross-entropy with pytorch tensor operations
-def softXEnt(input, target):
-    logprobs = torch.nn.functional.log_softmax(input, dim=1)
-    logtargets = torch.nn.functional.log_softmax(target, dim=1)
-    return -(logtargets * logprobs).sum() / input.shape[0]
-
 def to_categorical(y, num_classes=None):
     y = np.array(y, dtype='int')
     input_shape = y.shape
