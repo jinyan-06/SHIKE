@@ -66,24 +66,6 @@ parser.add_argument('-p',
 args = parser.parse_args()
 
 
-grads = {}
-
-
-def save_grad(name):
-    def hook(grad):
-        float_grad = grad.double()
-        pos_grad, neg_grad = torch.where(float_grad > 0, float_grad, 0.), torch.where(
-            float_grad <= 0, float_grad, 0.)
-        pos_grad, neg_grad = torch.sum(
-            pos_grad, dim=0), torch.sum(neg_grad, dim=0)
-        if grads[name] == None:
-            grads[name] = [pos_grad, neg_grad]
-        else:
-            grads[name][0] += pos_grad
-            grads[name][1] += neg_grad
-    return hook
-
-
 def main():
 
     if not os.path.exists(args.outf):
@@ -145,11 +127,6 @@ def main():
 
     # proceeding with torch apex
     scaler = GradScaler()
-
-    for name, param in model.named_parameters():
-        if name[:11] == "classifiers":  # for DDP use: module.classifiers
-            # param.register_hook(save_grad(name))
-            grads[name] = None
 
     for epoch in range(0, args.epochs):  # args.start_epoch
 
@@ -272,12 +249,6 @@ def train(train_loader, model, scaler, optimizer, epoch, grads, args):
         # compute output
         with autocast():
             outputs = model(images, (epoch >= args.cornerstone))
-            if epoch < args.cornerstone:
-                hooks = []
-                for i in range(len(outputs)):
-                    h = outputs[i].register_hook(
-                        save_grad(list(grads.keys())[i]))
-                    hooks.append(h)
             loss, output = mix_outputs(outputs=outputs, labels=target, balance=(
                 epoch >= args.cornerstone), label_dis=args.label_dis)
         _, target = torch.max(target.data, 1)
