@@ -16,4 +16,4 @@ For CIFAR100-LT with an imbalanced factor of 100, please directly run the traini
 ### Implementation for other datasets is coming...
 
 ### Acknowledgement
-Data augmentation mainly follows Balanced Meta Softmax and PaCo.
+Data augmentation mainly follows [Balanced Meta Softmax](https://github.com/jiawei-ren/BalancedMetaSoftmax-Classification) and [PaCo](https://github.com/dvlab-research/Parametric-Contrastive-Learning).
