@@ -10,10 +10,10 @@ python  3.7.7
 torch   1.11.0
 ```
 
-#### Uses
+#### Usage
 For CIFAR100-LT with an imbalanced factor of 100, please directly run the training file.
 
-### Implementation for other datasets is coming soon...
+### Implementation for other datasets is coming...
 
 ### Acknowledgement
 Data augmentation mainly follows Balanced Meta Softmax and PaCo.
