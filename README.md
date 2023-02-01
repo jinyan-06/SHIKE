@@ -9,7 +9,7 @@ python  3.7.7
 torch   1.11.0
 
 #### Uses
-For CIFAR100-LT with imbalanced factor 100, directly run the training file.
+For CIFAR100-LT with imbalanced factor 100, please directly run the training file.
 
 
 ### Implementation for other datasets include ImageNet-LT, iNaturalist2018 and Places-LT is coming soon...
