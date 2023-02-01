@@ -2,7 +2,7 @@
 
 This is the source code for SHIKE.
 
-### An early demo of SHIKE for CIAFR100-LT
+### An early demo of SHIKE for CIFAR100-LT
 
 #### Requirements
 ```
