@@ -41,11 +41,9 @@ data_transforms = {
 }
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR-LT Training')
-parser.add_argument('--outf', default='./outputs/',
-                    help='folder to output images and model checkpoints')
+parser.add_argument('--outf', default='./outputs/', help='folder to output images and model checkpoints')
 parser.add_argument('--pre_epoch', default=0, help='epoch for pre-training')
-parser.add_argument('--epochs', default=200,
-                    help='epoch for augmented training')
+parser.add_argument('--epochs', default=200, help='epoch for augmented training')
 parser.add_argument('--batch_size', default=128)
 parser.add_argument('--learning_rate', default=0.05)
 parser.add_argument('--seed', default=123, help='keep all seeds fixed')
@@ -83,8 +81,10 @@ def main():
 
     train_set = IMBALANCECIFAR100(root='./datasets/data', imb_factor=0.01,
                                   rand_number=0, train=True, transform=data_transforms['advanced_train'])
-    train_loader = torch.utils.data.DataLoader(
-        train_set, batch_size=args.batch_size, shuffle=True, num_workers=16)
+    train_loader = torch.utils.data.DataLoader(train_set,
+                                               batch_size=args.batch_size,
+                                               shuffle=True,
+                                               num_workers=16)
     test_set = datasets.CIFAR100(
         root='./datasets/data', train=False, download=True, transform=data_transforms['test'])
     test_loader = torch.utils.data.DataLoader(test_set,
@@ -286,9 +286,6 @@ def validate(val_loader, model, criterion, epoch, args):
     # switch to evaluate mode
     model.eval()
 
-    if epoch == (args.epochs - 1):
-        class_accs = ClassMeter(num_classes=100, num_exps=args.num_exps)
-
     with torch.no_grad():
         end = time.time()
         for i, (images, target) in enumerate(val_loader):
@@ -298,9 +295,6 @@ def validate(val_loader, model, criterion, epoch, args):
             # compute output
             outputs = model(images, (epoch >= args.cornerstone))
             output = sum(outputs) / len(outputs)
-
-            if epoch == (args.epochs - 1):
-                class_accs.update(outputs, target)
 
             loss = criterion(output, target)
 
@@ -318,24 +312,10 @@ def validate(val_loader, model, criterion, epoch, args):
             if i % args.print_freq == 0:
                 progress.display(i)
 
-        if epoch == (args.epochs - 1):
-            exp_class_acc, ensemble_class_acc = class_accs.get_exps_ens_class_acc()
-            f_acc = open("0127_cifar100-imb100_mul1_hs10_exp3.txt", "a")
-
-            for i in range(len(exp_class_acc)):
-                for acc in exp_class_acc[i]:
-                    f_acc.write(str(acc) + " ")
-                f_acc.write("\n")
-
-            for i in ensemble_class_acc:
-                f_acc.write(str(i) + " ")
-            f_acc.write("\n")
-            f_acc.close()
-
         # TODO: this should also be done with the ProgressMeter
         print(' * Acc@1 {top1.avg:.3f} Acc@5 {top5.avg:.3f}'.format(top1=top1,
                                                                     top5=top5))
-    return top1.avg  # , ac_sum
+    return top1.avg
 
 
 def save_checkpoint(state, is_best, feat, epochs, filename='cifar100_if100_demo'):
@@ -408,46 +388,8 @@ def accuracy(output, target, topk=(1, )):
         return res
 
 
-class ClassMeter(object):
-    def __init__(self, num_classes, num_exps):
-        self.num_classes = num_classes
-        self.num_exps = num_exps
-        self.reset()
-
-    def reset(self):
-        self.exps = [np.zeros((self.num_classes, self.num_classes), dtype=int)
-                     for _ in range(self.num_exps)]
-        self.ensemble = np.zeros(
-            (self.num_classes, self.num_classes), dtype=int)
-
-    def update(self, outputs, target):
-        batch_size = target.size(0)
-        for i in range(len(outputs)):
-            for j in range(batch_size):
-                self.exps[i][torch.argmax(outputs[i][j]), target[j]] += 1
-        avg_output = sum(outputs) / len(outputs)
-        for k in range(batch_size):
-            self.ensemble[torch.argmax(avg_output[k]), target[k]] += 1
-
-    def get_exps_ens_class_acc(self):
-        exp_class_acc = [self.get_acc_per_class(_) for _ in self.exps]
-        ensemble_class_acc = self.get_acc_per_class(self.ensemble)
-        return exp_class_acc, ensemble_class_acc
-
-    def get_acc_per_class(self, matrix):
-        rec = np.array(
-            [
-                matrix[i, i] / matrix[:, i].sum()
-                for i in range(self.num_classes)
-            ]
-        )
-        rec[np.isnan(rec)] = 0
-        return rec
-
-
 if __name__ == '__main__':
     clock_start = datetime.datetime.now()
     main()
     clock_end = datetime.datetime.now()
     print(clock_end - clock_start)
-    print(grads.keys)
