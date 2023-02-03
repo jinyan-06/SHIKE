@@ -138,7 +138,7 @@ def main():
 
         # train for one epoch
         train(train_loader if epoch >= args.cornerstone else train_loader, model, scaler,
-              optimizer_crt if epoch >= args.cornerstone else optimizer_feat, epoch, grads, args)
+              optimizer_crt if epoch >= args.cornerstone else optimizer_feat, epoch, args)
 
         # evaluate on validation set
         acc1 = validate(test_loader, model, criterion, epoch, args)
@@ -223,7 +223,7 @@ def mix_outputs(outputs, labels, balance=False, label_dis=None):
     return loss, avg_output
 
 
-def train(train_loader, model, scaler, optimizer, epoch, grads, args):
+def train(train_loader, model, scaler, optimizer, epoch, args):
     batch_time = AverageMeter('Time', ':6.3f')
     data_time = AverageMeter('Data', ':6.3f')
     losses = AverageMeter('Loss', ':.4e')
