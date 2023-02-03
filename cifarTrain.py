@@ -264,9 +264,6 @@ def train(train_loader, model, scaler, optimizer, epoch, args):
         scaler.step(optimizer)
         scaler.update()
 
-        if epoch < args.cornerstone:
-            for hook in hooks:
-                hook.remove()
         # measure elapsed time
         batch_time.update(time.time() - end)
         end = time.time()
