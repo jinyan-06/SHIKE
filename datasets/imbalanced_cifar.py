@@ -17,7 +17,7 @@ class IMBALANCECIFAR10(torchvision.datasets.CIFAR10):
 
     def __init__(self, root, imb_type='exp', imb_factor=0.01, rand_number=0, train=True,
                  transform=None, target_transform=None,
-                 download=False):
+                 download=True):
         super(IMBALANCECIFAR10, self).__init__(root, train, transform, target_transform, download)
         # print(rand_number)
         np.random.seed(0)
@@ -91,4 +91,4 @@ class IMBALANCECIFAR100(IMBALANCECIFAR10):
 
 if __name__ == '__main__':
     trainset = IMBALANCECIFAR100(root='./data', train=True,
-                                 download=True, transform=None, rand_number=100)
+                                 download=True, transform=None, rand_number=0)
