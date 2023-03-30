@@ -4,9 +4,15 @@
 <svg
    version="1.1"
    id="svg9"
-   width="1924.16"
-   height="729.27997"
-   viewBox="0 0 1924.16 729.27997"
+   width="1835.3691"
+   height="725.33258"
+   viewBox="0 0 1835.3691 725.33258"
+   sodipodi:docname="shike-overall.pdf"
+   inkscape:export-filename="shike-overall.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
@@ -20,9 +26,21 @@
          id="path35" />
     </clipPath>
   </defs>
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
   <g
      id="g17"
-     transform="matrix(0.31999998,0,0,0.31999998,0,2.1565332e-5)">
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(0.31999998,0,0,0.31999998,-39.76394,0)">
     <g
        id="g31">
       <g
@@ -134,6 +152,7 @@
              id="text91"><tspan
                x="0 5.3320312 25.324219 38.671875 52.019531"
                y="0"
+               sodipodi:role="line"
                id="tspan89">image</tspan></text>
         </g>
         <g
@@ -194,6 +213,7 @@
              id="text121"><tspan
                x="0 17.332031 30.679688 44.027344 50.695312 64.042969 72.035156 89.367188 94.699219 106.69922 120.04688 126.71484 142.72266 156.07031 169.41797 186.75 192.08203 205.42969 218.77734 232.125 245.47266 252.14062 266.80078 280.14844 292.14844 297.48047 310.82812"
                y="0"
+               sodipodi:role="line"
                id="tspan119">Depth-wise Knowledge Fusion</tspan></text>
           <text
              xml:space="preserve"
@@ -202,6 +222,7 @@
              id="text125"><tspan
                x="0 12 25.347656 38.695312 44.027344 49.359375 62.707031 80.039062 93.375 100.04297 113.39062 126.73828 133.40625 146.75391 154.74609 168.09375"
                y="0"
+               sodipodi:role="line"
                id="tspan123">shallow features</tspan></text>
           <text
              xml:space="preserve"
@@ -210,6 +231,7 @@
              id="text129"><tspan
                x="0 13.347656 26.695312 40.042969 53.390625 66.726562 73.394531 86.742188 100.08984 106.75781 120.10547 128.09766 141.44531"
                y="0"
+               sodipodi:role="line"
                id="tspan127">deep features</tspan></text>
         </g>
         <g
@@ -266,6 +288,7 @@
              id="text157"><tspan
                x="0 14.443359 25.566406 40.009766"
                y="0"
+               sodipodi:role="line"
                id="tspan155">Down</tspan></text>
           <text
              xml:space="preserve"
@@ -274,6 +297,7 @@
              id="text161"><tspan
                x="0 13.339844 24.462891 41.123047 52.246094 56.689453 61.132812 72.255859"
                y="0"
+               sodipodi:role="line"
                id="tspan159">Sampling</tspan></text>
         </g>
         <g
@@ -298,6 +322,7 @@
              id="text173"><tspan
                x="0 19.992188 33.339844 49.347656 56.015625 70.675781 84.023438 97.371094 104.03906 117.38672 125.37891 138.72656 145.39453 161.40234 173.40234 180.07031 188.0625 201.41016 213.41016 220.07812 233.42578 241.41797"
                y="0"
+               sodipodi:role="line"
                id="tspan171">MoE Feature Extractors</tspan></text>
           <text
              xml:space="preserve"
@@ -306,6 +331,7 @@
              id="text177"><tspan
                x="0 17.332031 29.332031 42.679688 56.027344 76.019531 81.351562 93.351562 100.01953 116.02734 129.375 142.72266 160.05469 165.38672 178.73438 192.08203 205.42969"
                y="0"
+               sodipodi:role="line"
                id="tspan175">Dynamic Knowledge</tspan></text>
           <text
              xml:space="preserve"
@@ -314,6 +340,7 @@
              id="text181"><tspan
                x="0 13.769531 21.761719 35.109375 48.457031 60.457031 67.125 80.472656"
                y="0"
+               sodipodi:role="line"
                id="tspan179">Transfer</tspan></text>
           <text
              xml:space="preserve"
@@ -322,6 +349,7 @@
              id="text185"><tspan
                x="0 19.992188 33.339844 49.347656 56.015625 73.347656 78.679688 92.027344 104.02734 116.02734 121.35938 128.02734 133.35938 146.70703 154.69922"
                y="0"
+               sodipodi:role="line"
                id="tspan183">MoE Classifiers</tspan></text>
           <text
              xml:space="preserve"
@@ -330,6 +358,7 @@
              id="text189"><tspan
                x="0 6.6679688 20.015625 28.007812 41.355469 54.703125"
                y="0"
+               sodipodi:role="line"
                id="tspan187">target</tspan></text>
           <text
              xml:space="preserve"
@@ -338,6 +367,7 @@
              id="text193"><tspan
                x="0 13.347656 26.695312 40.042969 48.035156 54.703125 68.050781 76.042969 89.390625 102.73828"
                y="0"
+               sodipodi:role="line"
                id="tspan191">non-target</tspan></text>
         </g>
         <g
@@ -382,6 +412,7 @@
              id="text215"><tspan
                x="0 12 25.347656 38.695312 50.695312 64.042969 77.390625 89.390625 102.73828"
                y="0"
+               sodipodi:role="line"
                id="tspan213">consensus</tspan></text>
           <text
              xml:space="preserve"
@@ -390,6 +421,7 @@
              id="text219"><tspan
                x="0 13.347656 26.695312 34.6875 48.035156 61.382812 73.382812 80.050781 86.71875 100.06641 113.41406 126.76172 140.10938 146.77734 152.10938 164.10938"
                y="0"
+               sodipodi:role="line"
                id="tspan217">hardest negative</tspan></text>
           <text
              xml:space="preserve"
@@ -398,6 +430,7 @@
              id="text223"><tspan
                x="0 19.992188 33.339844 45.339844"
                y="0"
+               sodipodi:role="line"
                id="tspan221">max </tspan></text>
           <text
              xml:space="preserve"
@@ -406,6 +439,7 @@
              id="text227"><tspan
                x="0 13.347656 26.695312 40.042969 48.035156 54.703125 68.050781 76.042969 89.390625 102.73828"
                y="0"
+               sodipodi:role="line"
                id="tspan225">non-target</tspan></text>
           <text
              xml:space="preserve"
@@ -414,6 +448,7 @@
              id="text231"><tspan
                x="0 12.216797 23.339844 30 44.443359 55.566406 62.226562"
                y="0"
+               sodipodi:role="line"
                id="tspan229">Forward</tspan></text>
           <text
              xml:space="preserve"
@@ -422,6 +457,7 @@
              id="text235"><tspan
                x="0 11.123047 22.246094 32.246094"
                y="0"
+               sodipodi:role="line"
                id="tspan233">Loss</tspan></text>
           <text
              xml:space="preserve"
@@ -430,6 +466,7 @@
              id="text239"><tspan
                x="0 14.443359 25.566406 31.123047 45.566406 56.689453 63.349609"
                y="0"
+               sodipodi:role="line"
                id="tspan237">Network</tspan></text>
           <text
              xml:space="preserve"
@@ -438,6 +475,7 @@
              id="text243"><tspan
                x="0 13.339844 24.462891 31.123047 42.246094 58.90625 70.029297 75.585938 86.708984 93.369141"
                y="0"
+               sodipodi:role="line"
                id="tspan241">Parameters</tspan></text>
         </g>
         <g
@@ -466,6 +504,7 @@
              id="text257"><tspan
                x="0 12.216797 23.339844 34.462891 40.019531 51.142578 57.802734 68.925781 74.482422 91.142578 102.26562 113.38867"
                y="0"
+               sodipodi:role="line"
                id="tspan255">Feature Maps</tspan></text>
         </g>
         <g
@@ -678,6 +717,7 @@
              id="text363"><tspan
                x="0 15.556641 26.679688 37.802734 48.925781 55.585938 66.708984 72.265625"
                y="0"
+               sodipodi:role="line"
                id="tspan361">Generate</tspan></text>
         </g>
         <g
@@ -2006,6 +2046,7 @@
              id="text1027"><tspan
                x="0 5.3320312 18.679688 32.027344 45.375"
                y="0"
+               sodipodi:role="line"
                id="tspan1025">label</tspan></text>
         </g>
         <g
@@ -2034,6 +2075,7 @@
              id="text1041"><tspan
                x="0 10 16.660156 27.783203 37.783203 47.783203 58.896484 70.019531 81.142578 86.699219 93.359375 104.48242 115.60547"
                y="0"
+               sodipodi:role="line"
                id="tspan1039">cross entropy</tspan></text>
           <text
              xml:space="preserve"
@@ -2042,6 +2084,7 @@
              id="text1045"><tspan
                x="0 11.123047 22.246094 33.369141 40.029297 45.585938 56.708984 63.369141 74.492188 85.615234"
                y="0"
+               sodipodi:role="line"
                id="tspan1043">non-target</tspan></text>
           <text
              xml:space="preserve"
@@ -2050,6 +2093,7 @@
              id="text1049"><tspan
                x="0 11.123047 15.566406 25.566406 31.123047 35.566406 40.009766 44.453125 55.576172 61.132812 65.576172 76.699219"
                y="0"
+               sodipodi:role="line"
                id="tspan1047">distillation</tspan></text>
           <text
              xml:space="preserve"
@@ -2058,6 +2102,7 @@
              id="text1053"><tspan
                x="0 16.660156 27.783203 33.339844 44.462891 55.585938"
                y="0"
+               sodipodi:role="line"
                id="tspan1051">mutual</tspan></text>
         </g>
         <g
@@ -2202,6 +2247,7 @@
              id="text1125"><tspan
                x="0 14.443359 25.566406 36.689453 47.8125 64.472656 75.595703 82.255859 93.378906"
                y="0"
+               sodipodi:role="line"
                id="tspan1123">Hadamard </tspan></text>
           <text
              xml:space="preserve"
@@ -2210,6 +2256,7 @@
              id="text1129"><tspan
                x="0 13.339844 20 31.123047 42.246094 53.369141 63.369141"
                y="0"
+               sodipodi:role="line"
                id="tspan1127">Product</tspan></text>
           <text
              xml:space="preserve"
@@ -2250,6 +2297,7 @@
              id="text1149"><tspan
                x="0 11.123047 15.566406 25.566406 31.123047 35.566406 40.009766 44.453125 55.576172 61.132812 65.576172 76.699219"
                y="0"
+               sodipodi:role="line"
                id="tspan1147">distillation</tspan></text>
           <path
              d="m 1315.5,506 h 14 c 0.3977,0 0.7803,0.0761 1.1478,0.2283 0.3676,0.15225 0.692,0.36902 0.9734,0.65033 0.2813,0.28128 0.4981,0.60568 0.6503,0.97327 0.1522,0.36755 0.2284,0.75024 0.2285,1.1481 v 64 c -10e-5,0.39777 -0.076,0.78046 -0.2285,1.14795 -0.1522,0.36755 -0.369,0.69202 -0.6503,0.97333 -0.2814,0.28131 -0.6058,0.49804 -0.9734,0.65027 -0.3675,0.15228 -0.7501,0.22839 -1.1478,0.22845 h -14 c -0.3979,-6e-5 -0.7806,-0.0762 -1.1482,-0.22845 -0.3675,-0.15223 -0.692,-0.36896 -0.9733,-0.65027 -0.2813,-0.28131 -0.4981,-0.60578 -0.6503,-0.97333 -0.1523,-0.36749 -0.2283,-0.75018 -0.2282,-1.14795 v -64 c -10e-5,-0.39786 0.076,-0.78055 0.2282,-1.1481 0.1522,-0.36759 0.369,-0.69199 0.6503,-0.97327 0.2813,-0.28131 0.6058,-0.49808 0.9733,-0.65033 0.3676,-0.15219 0.7503,-0.2283 1.1482,-0.2283 z"
