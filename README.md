@@ -3,7 +3,7 @@
 
 **Authors**: Yan Jin, [Mengke Li](https://github.com/Keke921), [Yang Lu*](https://jasonyanglu.github.io), [Yiu-ming Cheung](http://www.comp.hkbu.edu.hk/~ymc/), [Hanzi Wang](https://pami.xmu.edu.cn/hanzi_cn/)
 
-![SHIKE-overall](link "assets/shike-overall.pdf")
+![SHIKE-overall](link "assets/shike-overall.svg")
 
 This is the repository of the CVPR 2023 paper: "Long-Tailed Visual Recognition via Self-Heterogeneous Integration with Knowledge Excavation." We find that deep neural networks have different preferences towards the long-tailed distribution according to the depth. SHIKE is designed as a Mixture of Experts (MoE) method, which fuses  features of different depths and enables transfer among experts,  boosting the performance effectively in long-tailed visual recognition. 
 
