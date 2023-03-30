@@ -13,14 +13,6 @@
      id="defs13">
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath25">
-      <path
-         d="M 0,0 H 6012.4995 V 2278.6416 H 0 Z"
-         clip-rule="evenodd"
-         id="path23" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
        id="clipPath37">
       <path
          d="M 0,0 H 6012.4995 V 2269.6587 H 0 Z"
@@ -31,21 +23,6 @@
   <g
      id="g17"
      transform="matrix(0.31999998,0,0,0.31999998,0,2.1565332e-5)">
-    <g
-       id="g19">
-      <g
-         id="g21"
-         clip-path="url(#clipPath25)">
-        <g
-           id="g27"
-           transform="scale(2.9942727)">
-          <path
-             d="M 0,0 H 2008 V 761 H 0 Z"
-             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path29" />
-        </g>
-      </g>
-    </g>
     <g
        id="g31">
       <g
