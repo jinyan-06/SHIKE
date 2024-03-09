@@ -12,6 +12,9 @@ This is the repository of the CVPR 2023 paper: "Long-Tailed Visual Recognition v
 python  3.7.7 or above
 torch   1.11.0 or above
 ```
+### Code reproducibility
+Using the requirements file in this repo to create a virtual env.
+Reset the seed to 0 (the former one is 123) and you may get the ideal result.
 
 ### Implementation for all datasets is still under reoganizing...
 stay tuned for it～
