@@ -14,7 +14,7 @@ torch   1.11.0 or above
 ```
 ### Code reproducibility
 Using the requirements file in this repo to create a virtual env.
-Reset the seed to 0 (the former one is 123) and you may get the ideal result.
+Reset the seed to 0 (line 49 in cifarTrain.py) and you may get the ideal result.
 
 ### Implementation for all datasets is still under reoganizing...
 stay tuned for it～
